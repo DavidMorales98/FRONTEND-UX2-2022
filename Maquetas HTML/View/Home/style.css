@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+
+:root {
+    --color1: #828282;
+    --color2: #5e5e5e;
+    --color3: #aaaa;
+    --color4: #c6c6c6;
+    --color5: #B73E3E;
+    --color-text1: #333;
+    --color-text2: #fff;
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-color: #C6C6C6;
+    min-height: 100vh;
+}
+
+nav{
+    text-decoration: none;
+    list-style: none;
+    background-color: var(--color2);
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav img{
+    height: 100px;
+    width: auto;
+}
+nav ul{
+    float: left;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 30px;
+    margin: 0 5px;
+    border: 2px solid red;
+
+    color:var(--color-text1);
+    font-size: 17px;
+    text-decoration: none;
+    padding: 10px 10px;
+    border-radius: 50px;
+    background-color: var(--color-text2);
+    border: 1px solid var(--color-text1);
+
+}
+
+nav ul li a{
+    color:var(--color-text1);
+    font-size: 17px;
+    text-decoration: none;
+    padding: 10px 10px;
+    border-radius: 50px;
+}
+
+nav ul li.active, li:hover{
+    background-color: var(--color1);
+    color: var(--color-text2);
+    transition: .5s;
+
+} 
+nav ul li.active a, li:hover a{
+    color: var(--color-text2);
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+
+@media (max-width: 1228px){
+    .checkbtn{
+        display: block;
+        margin-left: 40px;
+    }
+    ul{
+        position: fixed;
+        margin-top: 20px;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--color-text1);
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        display: block;
+        padding-top: 5%;
+    }
+    nav ul li{
+        display: block;
+        border-radius: 0;
+        margin: 10px 0px 10px;
+
+    }
+    nav ul li{
+        align-items: center;
+        align-content: center;
+
+    }
+    li:hover a, li.active a{
+
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+
+}
+section{
+    background: url(gray-concrete-wall.jpg) no-repeat;
+    background-size: cover;
+    height: calc(100vh - 100px);
+    align-items: center;
+}
+
+.section-text{
+    text-align: center;
+
+}
+.section-text h1{
+    font-size: 50px;
+}
+.section-text h2{
+    font-size: 28px;
+}
+
+section .container {
+	display: block;
+	align-items: center;
+	justify-content: center;
+    margin: 70px 10%;
+    height: 600px;    
+}
+
+.account-content{
+    background-color: var(--color-text2);
+    border-radius: 25px;
+    border: 2px solid var(--color-text1);
+    width: 100%;
+    height: 120px;
+    margin-top: 10px;
+
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+}
+.account-info1{
+    text-align: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.account-info2{
+    text-align: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.container a{
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--color-text1);
+}

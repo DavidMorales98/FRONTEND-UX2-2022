@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+
+:root {
+    --color1: #828282;
+    --color2: #5e5e5e;
+    --color3: #aaaa;
+    --color4: #c6c6c6;
+    --color5: #B73E3E;
+    --color-text1: #333;
+    --color-text2: #fff;
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-color: #C6C6C6;
+    min-height: 100vh;
+}
+
+nav{
+    text-decoration: none;
+    list-style: none;
+    background-color: var(--color2);
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav img{
+    height: 100px;
+    width: auto;
+}
+nav ul{
+    float: left;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 30px;
+    margin: 0 5px;
+    border: 2px solid red;
+
+    color:var(--color-text1);
+    font-size: 17px;
+    text-decoration: none;
+    padding: 10px 10px;
+    border-radius: 50px;
+    background-color: var(--color-text2);
+    border: 1px solid var(--color-text1);
+
+}
+
+nav ul li a{
+    color:var(--color-text1);
+    font-size: 17px;
+    text-decoration: none;
+    padding: 10px 10px;
+    border-radius: 50px;
+}
+
+nav ul li.active, li:hover{
+    background-color: var(--color1);
+    color: var(--color-text2);
+    transition: .5s;
+
+} 
+nav ul li.active a, li:hover a{
+    color: var(--color-text2);
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+
+@media (max-width: 1228px){
+    .checkbtn{
+        display: block;
+        margin-left: 40px;
+    }
+    ul{
+        position: fixed;
+        margin-top: 20px;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--color-text1);
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        display: block;
+        padding-top: 5%;
+    }
+    nav ul li{
+        display: block;
+        border-radius: 0;
+        margin: 10px 0px 10px;
+
+    }
+    nav ul li{
+        align-items: center;
+        align-content: center;
+
+    }
+    li:hover a, li.active a{
+
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+
+}
+section{
+    background: url(gray-concrete-wall.jpg) no-repeat;
+    background-size: cover;
+    height: calc(100vh - 100px);
+    align-items: center;
+}
+
+
+.modal-container{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    visibility: hidden;
+}
+
+.modal-content{
+    width: 450px;
+    height: auto;
+    padding: 10px;
+    border-radius: 25px;
+    text-align: center;
+    background-color: var(--color-text2);
+}
+
+
+.modal-content h2{
+    font-size: 25px;
+    font-weight: 400px;
+}
+
+.modal-content .fi-rr-exclamation{
+    height: 300px;
+    padding: 30px 0px;
+}
+.modal-acept{
+    margin: 2% 5%;
+    height: 40px;
+    align-content: center;
+}
+
+#close{
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+    background-color: #82CD47;
+    color: var(--color-text2);
+    cursor: pointer;
+}
+
+#close:hover{
+    background-color: hsl(94, 57%, 40%);
+}
+
+.section-text{
+    padding: 5px;
+    text-align: center;
+    margin: 0px 30% 0px;
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.2);
+    align-items: center;
+}
+
+.section-text h1,h2{
+    padding: 10px
+}
+section .container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+table {
+    margin-top: 50px;
+	border: 1px solid var(--color2);
+	color: var(--color-text2);
+	font-size: 14px;
+	table-layout: fixed;
+	border-collapse: collapse;
+	border-radius: 5px 5px 0 0;
+	overflow-x: auto;
+	box-shadow: 0 0 20px rgb(0, 0, 0, 0.3);
+    background-color: var(--color1);
+}
+
+.compPago h1 {
+	color: var(--color-text2);
+	text-align: center;
+}
+
+thead {
+	background: var(--color2);
+}
+
+th {
+	padding: 20px 15px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+td {
+	padding: 15px;
+	border-bottom: 1px solid var(--color2);
+	text-align: center;
+}
+
+tbody tr:hover {
+	background-color: var(--color3);
+	color: var(--color-text1);
+}
